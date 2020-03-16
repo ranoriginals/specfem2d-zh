@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>SPECFEM2D 快速上手指南</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u4e3b\u9875";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> SPECFEM2D 快速上手指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">主页</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">快速开始</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="quickstart/install/">安装</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="quickstart/test/">测试</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">设置项</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="settings/source/">震源</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="settings/interface/">界面</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Parfile</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.01/">基础设置</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.02/">衰减</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.03/">震源</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.04/">台站</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.05/">敏感核</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.06/">边界条件</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.07/">密度-速度模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.08/">第三方软件网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.09/">xmeshfem2d网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.10/">显示</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="settings/Par_file/2.3.11/">输出图形文件</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">数值频散</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="numerical_dispersion/avoid/">避免数值频散</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">关于</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="about/update/">更新日志</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">SPECFEM2D 快速上手指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>主页</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="welcome-to-specfem2d">Welcome to SPECFEM2D</h1>
+<p>伴随状态法(Adjoint Tomography)是目前地震学成像领域最为流行的研究方法之一，其直接利用高精度数值方法来计算复杂三维介质中的波场，利用地震全波形信息来反演地下结构。随着计算能力的逐步提升，这一方法也会得到更加广泛的推广和使用。获取正演数据是进行伴随状态法研究的第一步，那么如何基于各种不同的模型获得正演数据也是要面临的核心问题之一。</p>
+<p>SPECFEM2D是通过数值方法求解二维情况下地震波传播问题的程序包，由<a href="https://geodynamics.org/cig/">CIG</a>提供，其基于谱元法(Spectral Element Method)求解空间内的波动方程。谱元法属于广义有限元方法，不仅具有有限元方法处理复杂结构的几何灵活性，还具有伪谱法高精度和快速收敛的特性。Github项目地址为：https://github.com/geodynamics/specfem2d</p>
+<p>本文档是基于使用SPECFEM2D的过程中获得的经验而得，旨在提供简明有效的参考指南，方便更多人可以更为轻松的上手使用。目前所得的经验均是基于SPECFEM2D中自带的xmeshfem2D。</p>
+<p>Authord by ranor@Computional_Seismo_NJU</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart/install/" class="btn btn-neutral float-right" title="安装">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="quickstart/install/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-03-16 05:00:26
+-->

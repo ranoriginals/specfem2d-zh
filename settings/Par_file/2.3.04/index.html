@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>台站 - SPECFEM2D 快速上手指南</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u53f0\u7ad9";
+    var mkdocs_page_input_path = "settings/Par_file/2.3.04.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> SPECFEM2D 快速上手指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">主页</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">快速开始</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/install/">安装</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/test/">测试</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">设置项</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../../source/">震源</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../interface/">界面</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Parfile</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.01/">基础设置</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.02/">衰减</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.03/">震源</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">台站</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_1">台站的设置项</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.05/">敏感核</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.06/">边界条件</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.07/">密度-速度模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.08/">第三方软件网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.09/">xmeshfem2d网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.10/">显示</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../2.3.11/">输出图形文件</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">数值频散</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../numerical_dispersion/avoid/">避免数值频散</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">关于</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/update/">更新日志</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">SPECFEM2D 快速上手指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Parfile &raquo;</li>
+        
+      
+        
+          <li>设置项 &raquo;</li>
+        
+      
+    
+    <li>台站</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="receivers">receivers</h1>
+<h2 id="_1">台站的设置项</h2>
+<table><tr><td bgcolor=#F08080>seismotype = 1</td></tr></table>
+
+<blockquote>
+<p>1表示记录位移，2表示记录速度，3表示记录加速度，4表示记录压强</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>subsamp_seismos = 1</td></tr></table>
+
+<blockquote>
+<p>表示降采样的倍数，一般设置为1，不降采样</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>NSTEP_BETWEEN_OUTPUT_SEISMOS = 1000</td></tr></table>
+
+<blockquote>
+<p>表示每1000步就保存一下地震记录到文件中，不建议使用太小的值。如果这个值大于NSTEP，则在正演结束后再保存记录</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>USER_T0 = 0.0d0</td></tr></table>
+
+<blockquote>
+<p>开始记录地震的起始时间，不使用SPECFEM2D自动计算的USER_T0</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>save_ASCII_seismograms = .true.</td></tr></table>
+
+<blockquote>
+<p>将正演计算输出的地震图保存为ASCII格式，就是OUTPUT_FILES里的*.semd，一列时间，一列振幅</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>save_binary_seismograms_single = .true.</td></tr></table>
+
+<blockquote>
+<p>将正演计算输出的地震图保存为binary格式，以单精度保留，对应OUTPUT_FILES中的Ux_file_single.bin</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>save_binary_seismograms_single = .false.</td></tr></table>
+
+<blockquote>
+<p>将正演计算输出的地震图保存为binary格式，以双精度保留，与单精度两个选项二选一</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>SU_FORMAT = .false.</td></tr></table>
+
+<blockquote>
+<p>将正演计算输出的地震图保存为seismic unix(即SU)格式，单精度。false表示不以此种方式保存</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080></td>use_existing_STATIONS = .false.</tr></table>
+
+<blockquote>
+<p>true表示使用已经在DATA文件夹中存在的STATIONS文件，.false.表示读取Par_file中关于台站的设置项</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>nreceiversets = 2</td></tr></table>
+
+<blockquote>
+<p>控制测线的数量，对于每条测线上台站的数量、间隔等都要单独设置</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>nrec = 11</td></tr></table>
+
+<blockquote>
+<p>控制一条测线上台站的个数</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>xdeb = 300</td></tr></table>
+
+<blockquote>
+<p>第一个台站在X-Z坐标系下的X坐标</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>zdeb = 2200</td></tr></table>
+
+<blockquote>
+<p>第一个台站在X-Z坐标系下的Z坐标</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>xfin = 3700</td></tr></table>
+
+<blockquote>
+<p>最后一个台站在X-Z坐标系下的X坐标</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>zfin = 2200</td></tr></table>
+
+<blockquote>
+<p>最后一个台站在X-Z坐标系下的Z坐标
+有了以上两个(x,z)坐标，控制测线头尾两端的位置，其余的台站等间隔地分布在这条测线上</p>
+</blockquote>
+<table><tr><td bgcolor=#F08080>record_at_surface_same_vertical = .true.</td></tr></table>
+
+<blockquote>
+<p>true表示所有的台站被强制设定在地表上，原来设定的Z值将不起作用。此时台站的Z值和地表高程有关。</p>
+</blockquote>
+<p>未确定作用的设置项有：
+<table><tr><td bgcolor=#F08080>USER_TRICK_FOR_BETTER_PRESSURE = .true.</td></tr></table></p>
+<blockquote></blockquote>
+<table><tr><td bgcolor=#F08080>anglerec = 0.d0</td></tr></table>
+
+<blockquote></blockquote>
+<table><tr><td bgcolor=#F08080>rec_normal_ro_surface = .false.</td></tr></table>
+
+<blockquote></blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2.3.05/" class="btn btn-neutral float-right" title="敏感核">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2.3.03/" class="btn btn-neutral" title="震源"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../2.3.03/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../2.3.05/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
