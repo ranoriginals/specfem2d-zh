@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>测试 - SPECFEM2D 快速上手指南</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6d4b\u8bd5";
+    var mkdocs_page_input_path = "quickstart/test.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SPECFEM2D 快速上手指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">快速开始</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../install/">安装</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">测试</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">设置项</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../settings/source/">震源</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../settings/interface/">界面</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Parfile</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.01/">基础设置</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.02/">衰减</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.03/">震源</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.04/">台站</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.05/">敏感核</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.06/">边界条件</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.07/">密度-速度模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.08/">第三方软件网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.09/">xmeshfem2d网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.10/">显示</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.11/">输出图形文件</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">数值频散</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../numerical_dispersion/avoid/">避免数值频散</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">关于</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/update/">更新日志</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SPECFEM2D 快速上手指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>快速开始 &raquo;</li>
+        
+      
+    
+    <li>测试</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>以<code>EXAMPLES/initial_plane_wave_with_free_surface</code>为例：</p>
+<p>切换至该目录：</p>
+<pre><code class="bash">$ cd ./EXAMPLES/initial_plane_wave_with_free_surface
+</code></pre>
+
+<p>修改<code>DATA</code>文件夹中的Par_file文件，<code>NPROC</code>设为<code>1</code>，<code>initialfield</code>改为<code>.false.</code></p>
+<pre><code class="bash">$ ./run_this_example.sh
+</code></pre>
+
+<p>程序计算的过程中会在屏幕上不断打印输出信息，等到最后可以输出：</p>
+<pre><code class="bash">see results in dictionary: OUTPUT_FILES/
+done
+运行结束的时间
+</code></pre>
+
+<p>说明SPECFEM2D已经编译成功。</p>
+<p>进行计算过程，结束之后会生成OUTPUT_FILES文件夹，此文件夹内存储着计算结果</p>
+<p>OUTPUT_FILES中的.semd为生成的地震记录，d为displacement，表示记录的是位移。借助脚本将其转化为sac可读的SAC文件，或是使用SAC的readtable命令也可以一个一个读取.semd。.jpg为位移场的snapshot，每100步会生成一个snapshot。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../settings/source/" class="btn btn-neutral float-right" title="震源">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install/" class="btn btn-neutral" title="安装"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../settings/source/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

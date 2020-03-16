@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>安装 - SPECFEM2D 快速上手指南</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5b89\u88c5";
+    var mkdocs_page_input_path = "quickstart/install.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SPECFEM2D 快速上手指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">快速开始</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">安装</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../test/">测试</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">设置项</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../settings/source/">震源</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../settings/interface/">界面</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Parfile</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.01/">基础设置</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.02/">衰减</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.03/">震源</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.04/">台站</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.05/">敏感核</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.06/">边界条件</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.07/">密度-速度模型</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.08/">第三方软件网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.09/">xmeshfem2d网格化</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.10/">显示</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../settings/Par_file/2.3.11/">输出图形文件</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">数值频散</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../numerical_dispersion/avoid/">避免数值频散</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">关于</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/update/">更新日志</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SPECFEM2D 快速上手指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>快速开始 &raquo;</li>
+        
+      
+    
+    <li>安装</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="_1">下载</h2>
+<p>1.通过Git下载SPECFEM2D的源码</p>
+<pre><code class="bash">$ git clone --recursive --branch devel https://github.com/geodynamics/specfem2d.git
+</code></pre>
+
+<p>2.如果Git的下载速度比较慢，可以下载ZIP文件解压到本地使用</p>
+<p>ZIP文件可以通过<code>Clone or download</code>下载</p>
+<h2 id="_2">编译</h2>
+<p>安装SPECFEM2D需要运算平台上具有C和Fortran的编译器，此外可以选装：</p>
+<p><a href="https://blog.seisman.info/intel-non-commercial-software/">Intel编译器</a>：可以使用gcc/gfortran的组合代替</p>
+<p><a href="https://blog.nickwhyy.top/mpich/">MPI并行环境</a>：可以通过MPI多核并行加快运算效率</p>
+<p><a href="https://blog.nickwhyy.top/scotch/">SCOTCH</a>：安装SPECFEM2D的过程中会自动安装其绑定版本的SCOTCH，但并不是最新的版本</p>
+<p>1.使用gcc/gfortran进行安装</p>
+<pre><code>$ ./configure FC=gfotran CC=gcc
+$ make
+</code></pre>
+
+<p>2.使用icc/ifort进行安装</p>
+<pre><code class="bash">$ ./configure FC=ifort CC=icc
+$ make
+</code></pre>
+
+<p>3.基于MPI进行安装</p>
+<pre><code class="bash">$ ./configure FC=gfortran CC=gcc MPIFC=/usr/local/mpi-3.1.4/bin/mpif90 --with-mpi
+</code></pre>
+
+<blockquote>
+<p>MPIFC最好给出显式路径，不然可能会调用系统其它的MPI。</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../test/" class="btn btn-neutral float-right" title="测试">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="主页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../test/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
